@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loginBtn {
+  padding: 12px 24px;
+  border: 1px solid rgba(17, 16, 28, 0.2);
+  border-radius: 30px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}

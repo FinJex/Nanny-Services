@@ -1,41 +1,29 @@
-'use client'
+"use client";
+
+import { useCallback, useState } from "react";
+import Modal from "@/components/Modal/Modal";
+import LoginForm from "@/components/LoginForm/LoginForm";
 import css from "./AuthNavigation.module.css";
-import Link from "next/link";
 
-const AuthNavigation = () => {
-    
-return isAuthenticated ? (
+export default function AuthNavigation() {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
+  const openLogin = () => setIsLoginOpen(true);
+  const closeLogin = useCallback(() => setIsLoginOpen(false), []);
+
+  return (
     <>
- <li className={css.navigationItem}>
-  <Link href="/Favorites" prefetch={false} className={css.navigationLink}>
-    Favorites
-  </Link>
-</li>
+      <div className={css.wrapper}>
+        <button type="button" className={css.loginBtn} onClick={openLogin}>
+          Log In
+        </button>
+      </div>
 
-
-
-<li className={css.navigationItem}>
-  <p className={css.userEmail}>{user?.email}</p>
-  <button className={css.logoutButton} onClick={handleLogout}>
-    Logout
-  </button>
-</li>
-</>
-) : (
-  <> 
-<li className={css.navigationItem}>
-  <Link href="/sign-in" prefetch={false} className={css.navigationLink}>
-    Login
-  </Link>
-</li>
-
-<li className={css.navigationItem}>
-  <Link href="/sign-up" prefetch={false} className={css.navigationLink}>
-    Sign up
-  </Link>
-</li>
-</>
-);
-};
-
-export default AuthNavigation;
+      {isLoginOpen && (
+        <Modal onClose={closeLogin}>
+          <LoginForm onSuccess={closeLogin} />
+        </Modal>
+      )}
+    </>
+  );
+}

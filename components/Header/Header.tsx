@@ -4,6 +4,7 @@ import Link from "next/link";
 import css from "./Header.module.css";
 import { usePathname } from "next/navigation";
 import { useIsFetching } from "@tanstack/react-query";
+import AuthNavigation from "../AurhNavigation/AuthNavigation";
 
 export default function Header() {
     const pathname = usePathname();
@@ -15,7 +16,9 @@ export default function Header() {
           <Link className={css.logo} href="/" aria-label="TravelTrucks— головна">
           Nanny.Services
     </Link>
-    <nav></nav>
+    <nav>
+      <AuthNavigation/>
+    </nav>
     </header>
   );
 }

@@ -1,0 +1,69 @@
+.title {
+font-family: "Helvetica Neue", sans-serif;
+font-weight: 500;
+font-size: 40px;
+line-height: 1.2;
+letter-spacing: -0.02em;
+color: #11101c;
+}
+
+.description {
+font-family: "Helvetica Neue", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.25;
+color: rgba(17, 16, 28, 0.5);
+}
+
+.passwordWrap {
+    position: relative
+}
+
+.label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.input {
+border: 1px solid rgba(17, 16, 28, 0.1);
+border-radius: 12px;
+padding-block: 16px;
+padding-inline: 18px 380px;
+max-width: 438px;
+height: 52px;
+}
+
+.input::placeholder {
+  color: #11101c;
+}
+
+.submit {
+font-family: "Helvetica Neue", sans-serif;
+font-weight: 500;
+font-size: 16px;
+line-height: 1.25;
+letter-spacing: -0.01em;
+color: #fbfbfb;
+border-radius: 30px;
+border: none;
+padding-block: 16px;
+padding-inline: 196px;
+max-width: 438px;
+height: 52px;
+background-color: #103931;
+margin-top: 40px;
+}
+
+.eye {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
