@@ -10,17 +10,28 @@ export default function Header() {
     const { user } = useAuth();
     const pathname = usePathname();
     const isHome = pathname === "/";
-  return (
-    <header className={`${css.header} ${isHome ? css.headerHome : css.headerGray}`}>
-          <Link className={css.logo} href="/">
-          Nanny.Services
+const getLinkClass = (href: string) =>
+  `${css.navigation} ${pathname === href ? css.active : ""}`;
+return (
+  <header className={`${css.header} ${isHome ? css.headerHome : css.headerGray}`}>
+    <Link className={css.logo} href="/">
+      Nanny.Services
     </Link>
-    <nav>
-      <Link href="/">Home</Link>
-      <Link href="/nannies">Nannies</Link>
-      {user && <Link href="/favorites">Favorites</Link>}
+    <nav className={css.nav}>
+      <Link href="/" className={getLinkClass("/")}>
+        Home
+      </Link>
+      <Link href="/nannies" className={getLinkClass("/nannies")}>
+        Nannies
+      </Link>
+      {user && (
+        <Link href="/favorites" className={getLinkClass("/favorites")}>
+          Favorites
+        </Link>
+      )}
     </nav>
-    <AuthNavigation/>
-    </header>
-  );
+    <AuthNavigation />
+  </header>
+);
 }
+
