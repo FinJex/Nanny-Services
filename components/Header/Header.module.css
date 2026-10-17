@@ -1,10 +1,30 @@
 .header {
   background-color: transparent; 
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   height: 88px;
+  padding-inline: var(--side-padding, 96px);
+  position: relative;
+  z-index: 1;
+}
+
+.headerGray {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  background-color: #103931;
+  color: #fbfbfb;
+}
+
+.headerHome {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.headerHome .logo {
+  margin-right: auto;
 }
 
 .logo {
@@ -14,7 +34,6 @@ font-size: 24px;
 line-height: 1.16667;
 letter-spacing: -0.02em;
 color: #fbfbfb;
-padding-left: 96px;
 }
 
 .nav {

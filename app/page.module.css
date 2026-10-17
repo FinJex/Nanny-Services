@@ -1,5 +1,114 @@
 .homePage {
-  background-color: #103931;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   height: 736px;
+  margin: 32px;
   border-radius: 30px;
+  overflow: hidden;
+  background-color: #103931;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-inline: 96px;
+}
+
+.title {
+font-family: "Helvetica Neue", sans-serif;
+font-weight: 500;
+font-size: 70px;
+line-height: 1;
+letter-spacing: -0.03em;
+color: #fbfbfb;
+width: 517px;
+margin-bottom: 0px;
+}
+
+.subtitle {
+font-family: "Helvetica Neue", sans-serif;
+font-weight: 400;
+font-size: 28px;
+line-height: 1.07143;
+letter-spacing: -0.02em;
+color: #fbfbfb;
+margin-bottom: 0px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 64px;
+  padding: 16px 40px;
+  border: 1px solid rgba(251, 251, 251, 0.4);
+  border-radius: 30px;
+  font-size: 18px;
+  color: #fbfbfb;
+  text-decoration: none;
+}
+
+.photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+}
+
+.photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(16, 57, 49, 0.25);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.card {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 20px;
+  background-color: #fbfbfb;
+  width: 284px;
+  height: 118px;
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 15px;
+  background-color: #103931;
+  color: #fbfbfb;
+  margin-left: 32px;
+}
+
+.cardLabel {
+font-family: "Helvetica Neue", sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: rgba(17, 16, 28, 0.5);
+}
+
+.cardValue {
+  margin-top: 4px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #11101c;
 }
