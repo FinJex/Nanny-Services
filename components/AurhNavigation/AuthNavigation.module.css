@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-right: 90px;
 }
 
 .loginBtn {
@@ -9,7 +10,19 @@
   border: 1px solid rgba(17, 16, 28, 0.2);
   border-radius: 30px;
   background: transparent;
-  color: inherit;
+  color: #FBFBFB;
   font: inherit;
   cursor: pointer;
+  border-color: #FBFBFB;
+}
+
+.registerBtn {
+  padding: 12px 24px;
+  border: 1px solid rgba(17, 16, 28, 0.2);
+  border-radius: 30px;
+  background: #103931;
+  color: #FBFBFB;
+  font: inherit;
+  cursor: pointer;
+  border: none;
 }

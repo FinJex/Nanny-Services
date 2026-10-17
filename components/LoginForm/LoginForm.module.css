@@ -13,6 +13,13 @@ font-weight: 400;
 font-size: 16px;
 line-height: 1.25;
 color: rgba(17, 16, 28, 0.5);
+margin-bottom: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 .passwordWrap {
@@ -28,6 +35,8 @@ color: rgba(17, 16, 28, 0.5);
   white-space: nowrap;
 }
 
+
+
 .input {
 border: 1px solid rgba(17, 16, 28, 0.1);
 border-radius: 12px;
@@ -35,10 +44,16 @@ padding-block: 16px;
 padding-inline: 18px 380px;
 max-width: 438px;
 height: 52px;
+gap: 18px;
 }
 
+
 .input::placeholder {
-  color: #11101c;
+font-family: "Helvetica Neue", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.25;
+color: #11101c;
 }
 
 .submit {
@@ -52,7 +67,7 @@ border-radius: 30px;
 border: none;
 padding-block: 16px;
 padding-inline: 196px;
-max-width: 438px;
+width: 100%;
 height: 52px;
 background-color: #103931;
 margin-top: 40px;

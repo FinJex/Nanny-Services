@@ -7,9 +7,10 @@ import css from "./Modal.module.css";
 interface ModalProps {
   onClose: () => void;
   children: React.ReactNode;
+  height?: string;
 }
 
-export default function Modal({ onClose, children }: ModalProps) {
+export default function Modal({ onClose, children, height }: ModalProps) {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -35,7 +36,7 @@ export default function Modal({ onClose, children }: ModalProps) {
 
   return createPortal(
     <div className={css.backdrop} onClick={handleBackdropClick}>
-      <div className={css.modal} role="dialog" aria-modal="true">
+      <div className={css.modal} role="dialog" aria-modal="true" style={{ height }}>
         <button
           type="button"
           className={css.closeBtn}
