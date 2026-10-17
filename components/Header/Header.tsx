@@ -3,22 +3,24 @@
 import Link from "next/link";
 import css from "./Header.module.css";
 import { usePathname } from "next/navigation";
-import { useIsFetching } from "@tanstack/react-query";
-import AuthNavigation from "../AurhNavigation/AuthNavigation";
+import AuthNavigation from "../AuthNavigation/AuthNavigation";
+import { useAuth } from "@/components/AuthProvider/AuthProvider";
 
 export default function Header() {
+    const { user } = useAuth();
     const pathname = usePathname();
-    const isFetching = useIsFetching({ queryKey: ["campers"] });
     const isHome = pathname === "/";
-    const forceWhite = isFetching > 0;
   return (
-    <header className={`${css.header} ${isHome || forceWhite ? css.headerHome : css.headerGray}`}>
-          <Link className={css.logo} href="/" aria-label="TravelTrucks— головна">
+    <header className={`${css.header} ${isHome ? css.headerHome : css.headerGray}`}>
+          <Link className={css.logo} href="/">
           Nanny.Services
     </Link>
     <nav>
-      <AuthNavigation/>
+      <Link href="/">Home</Link>
+      <Link href="/nannies">Nannies</Link>
+      {user && <Link href="/favorites">Favorites</Link>}
     </nav>
+    <AuthNavigation/>
     </header>
   );
 }

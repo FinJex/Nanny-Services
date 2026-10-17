@@ -26,3 +26,19 @@
   cursor: pointer;
   border: none;
 }
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-right: 24px;
+}
+
+.userName {
+font-family: "Helvetica Neue", sans-serif;
+font-weight: 500;
+font-size: 18px;
+line-height: 1.11111;
+letter-spacing: -0.01em;
+color: #fbfbfb;
+}

@@ -7,6 +7,7 @@ import { FirebaseError } from "firebase/app";
 import { registerSchema } from "@/schemas/auth";
 import { RegisterRequest } from "@/types/auth";
 import { registerUser } from "@/services/auth";
+import { useAuth } from "@/components/AuthProvider/AuthProvider";
 import css from "../LoginForm/LoginForm.module.css";
 
 interface RegisterFormProps {
@@ -16,6 +17,7 @@ interface RegisterFormProps {
 export default function RegisterForm({ onSuccess }: RegisterFormProps) {
   const [showPassword, setShowPassword] = useState(false);
   const [serverError, setServerError] = useState("");
+  const { refreshUser } = useAuth();
 
   const {
     register,
@@ -30,6 +32,7 @@ export default function RegisterForm({ onSuccess }: RegisterFormProps) {
     try {
       setServerError("");
       await registerUser(values);
+      refreshUser();
       onSuccess?.();
     } catch (error) {
       if (
