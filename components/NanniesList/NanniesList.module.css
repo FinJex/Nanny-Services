@@ -1,0 +1,35 @@
+.section {
+  min-height: 100vh;
+  padding: 64px 128px 100px;
+  background-color: #f3f3f3;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.message {
+  color: rgba(17, 16, 28, 0.5);
+}
+
+.loadMore {
+  display: block;
+  margin: 64px auto 0;
+  padding: 14px 40px;
+  border: none;
+  border-radius: 30px;
+  background-color: #103931;
+  font-weight: 500;
+  color: #fbfbfb;
+  cursor: pointer;
+}
+
+.loadMore:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

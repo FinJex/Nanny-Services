@@ -1,7 +1,9 @@
 p, a, h1, h2, h3, li, ul {
     text-decoration: none;
+    margin: 0;
 }
 
 body {
   margin: 0;
+  font-family: "Helvetica Neue", sans-serif;
 }

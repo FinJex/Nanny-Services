@@ -19,3 +19,20 @@ rating: number;
 reviews: Review[];
 
 }
+
+
+export type NanniesFilter =
+  | "name-asc"
+  | "name-desc"
+  | "price-low"
+  | "price-high"
+  | "popular"
+  | "not-popular"
+  | "all";
+
+export type NanniesCursor = {
+  value: string | number | null;
+  key: string;
+};
+
+export type NannyWithId = Nanny & { id: string };

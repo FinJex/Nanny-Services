@@ -1,0 +1,57 @@
+.root {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 32px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: rgba(17, 16, 28, 0.5);
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  min-width: 226px;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 14px;
+  background-color: #103931;
+  font-weight: 500;
+  color: #fbfbfb;
+  cursor: pointer;
+}
+
+.list {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin: 0;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background-color: #fbfbfb;
+  box-shadow: 0 20px 69px rgba(0, 0, 0, 0.07);
+  list-style: none;
+}
+
+.option {
+  padding: 0;
+  border: none;
+  background: transparent;
+  text-align: left;
+  color: rgba(17, 16, 28, 0.3);
+  cursor: pointer;
+}
+
+.optionActive {
+  color: #11101c;
+}

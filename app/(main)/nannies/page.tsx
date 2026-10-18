@@ -1,7 +1,5 @@
-export default function Nannies() {
-    return (
-        <div>
-            <p>nannies</p>
-        </div>
-    );
+import NanniesList from "@/components/NanniesList/NanniesList";
+
+export default function NanniesPage() {
+  return <NanniesList />;
 }
