@@ -19,7 +19,7 @@ import {
 } from "@/types/nanny";
 
 export const PAGE_SIZE = 3;
-const PRICE_LIMIT = 10;
+export const PRICE_LIMIT = 10;
 
 type SortField = "name" | "price_per_hour" | "rating";
 

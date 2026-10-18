@@ -33,3 +33,16 @@
   opacity: 0.6;
   cursor: default;
 }
+
+.warningTitle {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #11101c;
+}
+
+.warningText {
+  margin-top: 20px;
+  line-height: 1.25;
+  color: rgba(17, 16, 28, 0.5);
+}

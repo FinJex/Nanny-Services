@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/components/AuthProvider/AuthProvider";
+import FavoritesList from "@/components/FavoritesList/FavoritesList";
 
 export default function FavoritesPage() {
   const { user, isLoading } = useAuth();
@@ -18,5 +19,5 @@ export default function FavoritesPage() {
     return null;
   }
 
-  return <div>Favorites</div>;
+  return <FavoritesList />;
 }

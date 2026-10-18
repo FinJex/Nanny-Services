@@ -9,6 +9,8 @@ import css from "./NannyCard.module.css";
 
 interface NannyCardProps {
   nanny: NannyWithId;
+  isFavorite: boolean;
+  onToggleFavorite: (nanny: NannyWithId) => void;
 }
 
 function getAge(birthday: string) {
@@ -24,7 +26,11 @@ function getAge(birthday: string) {
   return age;
 }
 
-export default function NannyCard({ nanny }: NannyCardProps) {
+export default function NannyCard({
+  nanny,
+  isFavorite,
+  onToggleFavorite,
+}: NannyCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isAppointmentOpen, setIsAppointmentOpen] = useState(false);
 
@@ -70,15 +76,19 @@ export default function NannyCard({ nanny }: NannyCardProps) {
               Price / 1 hour:{" "}
               <span className={css.price}>{nanny.price_per_hour}$</span>
             </span>
-            <button
-              type="button"
-              className={css.heart}
-              aria-label="Add to favorites"
-            >
-              <svg width="26" height="26" aria-hidden="true">
-                <use href="/sprite.svg#icon-heart" />
-              </svg>
-            </button>
+<button
+  type="button"
+  className={`${css.heart} ${isFavorite ? css.heartActive : ""}`}
+  onClick={() => onToggleFavorite(nanny)}
+  aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+  aria-pressed={isFavorite}
+>
+  <svg width="26" height="26" aria-hidden="true">
+    <use
+      href={`/sprite.svg#${isFavorite ? "icon-heart-filled" : "icon-heart"}`}
+    />
+  </svg>
+</button>
           </div>
         </div>
 

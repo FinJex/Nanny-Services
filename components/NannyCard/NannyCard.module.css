@@ -85,6 +85,10 @@ color: #11101c;
   cursor: pointer;
 }
 
+.heartActive {
+  color: #103931;
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;
