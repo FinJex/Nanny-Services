@@ -52,6 +52,7 @@ export default function LoginForm({ onSuccess }: LoginFormProps) {
             id="email"
             type="email"
             placeholder="Email"
+            autoComplete="email"
             className={css.input}
             {...register("email")}
           />
@@ -67,6 +68,7 @@ export default function LoginForm({ onSuccess }: LoginFormProps) {
               id="password"
               type={showPassword ? "text" : "password"}
               placeholder="Password"
+              autoComplete="current-password"
               className={css.input}
               {...register("password")}
             />

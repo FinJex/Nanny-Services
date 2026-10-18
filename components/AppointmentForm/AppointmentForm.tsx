@@ -89,6 +89,7 @@ export default function AppointmentForm({
               id="address"
               type="text"
               placeholder="Address"
+              autoComplete="street-address"
               className={css.input}
               {...register("address")}
             />
@@ -105,6 +106,7 @@ export default function AppointmentForm({
               id="phone"
               type="tel"
               placeholder="+380"
+              autoComplete="tel"
               className={css.input}
               {...register("phone")}
             />
@@ -152,6 +154,7 @@ export default function AppointmentForm({
             id="email"
             type="email"
             placeholder="Email"
+            autoComplete="email"
             className={css.input}
             {...register("email")}
           />
@@ -166,6 +169,7 @@ export default function AppointmentForm({
             id="parentName"
             type="text"
             placeholder="Father's or mother's name"
+            autoComplete="name"
             className={css.input}
             {...register("parentName")}
           />

@@ -62,6 +62,7 @@ export default function RegisterForm({ onSuccess }: RegisterFormProps) {
               id="userName"
               type="text"
               placeholder="Name"
+              autoComplete="name"
               className={css.input}
               {...register("userName")}
             />
@@ -80,6 +81,7 @@ export default function RegisterForm({ onSuccess }: RegisterFormProps) {
               id="email"
               type="email"
               placeholder="Email"
+              autoComplete="email"
               className={css.input}
               {...register("email")}
             />
@@ -96,6 +98,7 @@ export default function RegisterForm({ onSuccess }: RegisterFormProps) {
               id="password"
               type={showPassword ? "text" : "password"}
               placeholder="Password"
+              autoComplete="new-password"
               className={css.input}
               {...register("password")}
             />
