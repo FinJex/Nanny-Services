@@ -5,6 +5,7 @@ font-size: 40px;
 line-height: 1.2;
 letter-spacing: -0.02em;
 color: #11101c;
+margin-bottom: 20px;
 }
 
 .description {
@@ -38,11 +39,12 @@ margin-bottom: 40px;
 
 
 .input {
+box-sizing: border-box;
 border: 1px solid rgba(17, 16, 28, 0.1);
 border-radius: 12px;
 padding-block: 16px;
 padding-inline: 18px 380px;
-max-width: 438px;
+width: 100%;
 height: 52px;
 gap: 18px;
 }

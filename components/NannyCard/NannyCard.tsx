@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import AppointmentForm from "@/components/AppointmentForm/AppointmentForm";
+import Modal from "@/components/Modal/Modal";
 import Image from "next/image";
 import { NannyWithId } from "@/types/nanny";
 import css from "./NannyCard.module.css";
@@ -23,7 +25,10 @@ function getAge(birthday: string) {
 }
 
 export default function NannyCard({ nanny }: NannyCardProps) {
-    const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isAppointmentOpen, setIsAppointmentOpen] = useState(false);
+
+  const closeAppointment = useCallback(() => setIsAppointmentOpen(false), []); 
   const characters = nanny.characters
     .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
     .join(", ");
@@ -132,12 +137,17 @@ export default function NannyCard({ nanny }: NannyCardProps) {
       ))}
     </ul>
 
-    <button type="button" className={css.appointment}>
+    <button type="button" className={css.appointment} onClick={() => setIsAppointmentOpen(true)}>
       Make an appointment
     </button>
   </>
 )}
       </div>
+      {isAppointmentOpen && (
+  <Modal onClose={closeAppointment} maxWidth="600px">
+    <AppointmentForm nanny={nanny} onClose={closeAppointment} />
+  </Modal>
+)}
     </article>
   );
 }

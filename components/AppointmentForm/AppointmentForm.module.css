@@ -1,0 +1,108 @@
+.title {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #11101c;
+}
+
+.description {
+  margin-top: 20px;
+  line-height: 1.25;
+  color: rgba(17, 16, 28, 0.5);
+}
+
+.nanny {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.nannyAvatar {
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.nannyLabel {
+  font-size: 12px;
+  color: rgba(17, 16, 28, 0.5);
+}
+
+.nannyName {
+  margin-top: 4px;
+  font-weight: 500;
+  color: #11101c;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input,
+.textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 16px;
+  border: 1px solid rgba(17, 16, 28, 0.1);
+  border-radius: 12px;
+  background-color: #fbfbfb;
+  color: #11101c;
+}
+
+.input {
+  height: 52px;
+}
+
+.textarea {
+  height: 116px;
+  padding-top: 16px;
+  resize: none;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #103931;
+}
+
+.error {
+  font-size: 12px;
+  color: #d93025;
+}
+
+.submit {
+  width: 100%;
+  height: 52px;
+  margin-top: 24px;
+  border: none;
+  border-radius: 30px;
+  background-color: #103931;
+  font-weight: 500;
+  color: #fbfbfb;
+  cursor: pointer;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
