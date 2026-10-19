@@ -3,10 +3,11 @@
   display: flex;
   flex-direction: column;
   height: 736px;
-  margin: 32px;
+  margin: 32px auto;
   border-radius: 30px;
   overflow: hidden;
   background-color: #103931;
+  width: min(100% - 64px, 1376px);
 }
 
 .hero {

@@ -3,7 +3,7 @@
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   height: 88px;
-  padding-inline: var(--side-padding, 96px);
+  padding-inline: max(96px, calc((100% - 1248px) / 2));
   position: relative;
   z-index: 1;
 }

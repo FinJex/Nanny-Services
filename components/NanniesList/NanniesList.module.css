@@ -2,6 +2,7 @@
   min-height: 100vh;
   padding: 64px 128px 100px;
   background-color: #f3f3f3;
+  padding: 64px max(128px, calc((100% - 1184px) / 2)) 100px;
 }
 
 .list {
